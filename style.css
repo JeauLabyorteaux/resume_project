@@ -1,0 +1,22 @@
+
+.contact-info{
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 0 auto;
+}
+
+
+.table-class{
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 0 auto;
+}
+
+
+.table-class td{
+    padding: 10px;
+}
+
+h1, h2 {
+      text-align: center;
+    }
