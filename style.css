@@ -1,22 +1,104 @@
+:root {
+    /* Baground color for page and base text color for page*/
+  --bg: #ffffff;
+  --text-color: #1f2937;
+  
+  /* main color */
+  --primary-color: #2563eb;
 
+  /* color for card backgrounds*/
+  --card-bg: #f9fafb;
+}
+
+/*main body of html file*/
+body{
+    /* set main font for the page */
+    font-family: 'Trebuchet MS','Segoe UI', sans-serif;
+
+    /*formatting, give lines room to breath and tighen margins*/
+    line-height: 1.4;
+    margin: 0;
+
+    /*set background color and text color of body elements*/
+    background-color: var(--bg);
+    color: var(--text-color)
+}
+
+/*main container for resume body*/
+.container{
+    /*set max width of resume*/
+    
+    max-width: 900px;
+    /*center resume on page (0 margin top and bottom, auto centered on sides)*/
+    margin: 0 auto
+}
+
+/*project cards*/
+.project-card{
+    /*set unique background color and color highlight*/
+    background-color: var(--card-bg);
+    border-top: 4px solid var(--primary-color);
+
+    /*padding protecting div content from div*/
+    padding: 10px;
+
+    /*padding to come after div box, separating project cards*/
+    margin-bottom: 20px;
+
+    /*give the edges of the div a nice curve*/
+    border-radius: 10px;
+
+
+    transition: transform 0.3s, box-shadow 0.5s;
+    
+    
+}
+
+/*section cards*/
+.section-card{
+    /*set unique background color and color highlight*/
+    background-color: var(--card-bg);
+    border-top: 4px solid var(--primary-color);
+
+    /*padding protecting div content from div*/
+    padding: 10px;
+
+    /*padding to come after div box, separating project cards*/
+    margin-bottom: 20px;
+
+    /*x offset / y offset / blur / spread 0 0 15 5 for center shadow*/
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+/*hover, build in function, change elements to this code when hover over project card*/
+.project-card:hover{
+    /*change how elements in project card look when they are hovered over*/
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/*contact info class*/
 .contact-info{
     border-collapse: separate;
     border-spacing: 5px;
     margin: 0 auto;
 }
 
-
+/*table class*/
 .table-class{
     border-collapse: separate;
     border-spacing: 5px;
     margin: 0 auto;
 }
 
-
+/*table item*/
 .table-class td{
     padding: 10px;
 }
 
-h1, h2 {
+/*general headers*/
+h2 {
       text-align: center;
     }
