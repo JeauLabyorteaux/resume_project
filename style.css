@@ -1,15 +1,25 @@
 :root {
     /* Baground color for page and base text color for page*/
   --bg: #ffffff;
-  --text-color: #1f2937;
-  
+  --text-color: #4c5c68;
   /* main color */
-  --primary-color: #2563eb;
-
+  --primary-color: #1985a1;
   /* color for card backgrounds*/
-  --card-bg: #f9fafb;
+  --card-bg: #f1f1f1;
 }
 
+header {
+  text-align: center; 
+  font-size: 1rem;
+}
+
+/*contact info class*/
+.contact-info{
+    border-collapse: separate;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
 /*main body of html file*/
 body{
     /* set main font for the page */
@@ -24,20 +34,54 @@ body{
     color: var(--text-color)
 }
 
+/*main body of html file*/
+body.dark-mode{
+       /* Baground color for page and base text color for page*/
+  --bg: #515151;
+  --text-color: #ffffff;
+  /* main color */
+  --primary-color: #1985a1;
+  /* color for card backgrounds*/
+  --card-bg: #5c5b5b;
+}
+
 /*main container for resume body*/
 .container{
     /*set max width of resume*/
-    
     max-width: 900px;
     /*center resume on page (0 margin top and bottom, auto centered on sides)*/
     margin: 0 auto
+}
+
+.theme-toggle {
+    appearance: none;      
+    -webkit-appearance: none; 
+    background-color: transparent;
+    border: 0;
+    width: auto;
+    height: auto;
+}
+
+.mode-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    width: 50px; 
+    height: auto; 
+    
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    transition: transform 0.2s ease;
+}
+
+.mode-icon:hover {
+    transform: scale(1.1); /* Subtle pop on hover */
 }
 
 /*project cards*/
 .project-card{
     /*set unique background color and color highlight*/
     background-color: var(--card-bg);
-    border-top: 4px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 
     /*padding protecting div content from div*/
     padding: 10px;
@@ -79,12 +123,7 @@ body{
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/*contact info class*/
-.contact-info{
-    border-collapse: separate;
-    border-spacing: 5px;
-    margin: 0 auto;
-}
+
 
 /*table class*/
 .table-class{
