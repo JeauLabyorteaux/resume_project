@@ -3,6 +3,7 @@
 // This is similar to finding an object in a list or a node in a tree.
 const body = document.body;
 const cards = document.querySelectorAll('.section-card, .project-card');
+const c3po = document.getElementById('c3po');
 
 const toggleBtn = document.createElement('button');
 toggleBtn.className = "theme-toggle";
@@ -14,3 +15,7 @@ body.prepend(toggleBtn);
 toggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 });
+
+c3po.addEventListener('click',function(){
+    window.location.href = 'c3po.html';
+})
