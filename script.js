@@ -3,7 +3,8 @@
 // This is similar to finding an object in a list or a node in a tree.
 const body = document.body;
 const cards = document.querySelectorAll('.section-card, .project-card');
-const c3po = document.getElementById('c3po');
+const home_c3po = document.getElementById('c3po');
+const c3po_home = document.getElementById('c3po-back');
 
 const toggleBtn = document.createElement('button');
 toggleBtn.className = "theme-toggle";
@@ -16,6 +17,17 @@ toggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 });
 
-c3po.addEventListener('click',function(){
+// Home -> C3PO
+if(home_c3po){
+home_c3po.addEventListener('click',function(){
     window.location.href = 'c3po.html';
 })
+
+}
+
+// C3PO -> Home
+if(c3po_home){
+c3po_home.addEventListener('click',function(){
+    window.location.href = 'index.html';
+})
+}

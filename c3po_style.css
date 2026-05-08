@@ -14,6 +14,39 @@ body.dark-mode {
   --card-bg: #5c5b5b;
 }
 
+.theme-toggle {
+    appearance: none;      
+    -webkit-appearance: none; 
+    background-color: transparent;
+    border: 0;
+    width: auto;
+    height: auto;
+}
+
+.mode-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    width: 50px; 
+    height: auto; 
+    
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    transition: transform 0.2s ease;
+}
+
+.mode-icon:hover {
+    transform: scale(1.1); /* Subtle pop on hover */
+}
+
+#c3po-back {
+    border: none;
+    color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 
 body {
   font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
@@ -70,10 +103,6 @@ td div {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-td div:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-}
 
 
 td .group-pic {
