@@ -62,7 +62,6 @@ body {
 
 h1 {
   text-align: center;
-  color: var(--primary-color);
   margin-bottom: 5px;
 }
 
@@ -75,7 +74,6 @@ h1 + p {
 }
 
 h2 {
-  color: var(--primary-color);
   margin-top: 0;
   font-size: 1.4rem;
 }
