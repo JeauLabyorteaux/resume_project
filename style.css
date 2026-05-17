@@ -25,7 +25,7 @@ body {
 }
 
 /*main body of html file*/
-body.dark-mode{
+html.dark-mode body{
        /* Baground color for page and base text color for page*/
   --bg: #515151;
   --text-color: #ffffff;
@@ -77,7 +77,7 @@ header {
 
 /* c3po back button*/
 .back-icon {
-    top: 30px;
+    top: 20px;
     left: 15px;
     width: 50px; 
     height: auto; 
