@@ -6,14 +6,12 @@ const cards = document.querySelectorAll('.section-card, .project-card');
 const home_c3po = document.getElementById('c3po');
 const c3po_home = document.getElementById('c3po-back');
 
-const toggleBtn = document.createElement('button');
-toggleBtn.className = "theme-toggle";
-toggleBtn.innerHTML = `<img src="theme.png" class="mode-icon" alt="Toggle Theme">`;
+const theme_toggle_button = document.createElement('button');
+theme_toggle_button.className = "theme-toggle";
+theme_toggle_button.innerHTML = `<img src="theme.png" class="mode-icon" alt="Toggle Theme">`;
+body.prepend(theme_toggle_button);
 
-
-body.prepend(toggleBtn);
-
-toggleBtn.addEventListener('click', function() {
+theme_toggle_button.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 });
 
