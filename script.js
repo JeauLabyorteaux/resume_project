@@ -1,6 +1,11 @@
 const body = document.body;
 const cards = document.querySelectorAll('.section-card, .project-card');
 const home_c3po = document.getElementById('c3po');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
 
 // Light / Dark Mode Toggle Button
 const theme_toggle_button = document.createElement('button');
@@ -13,11 +18,9 @@ const c3po_home = document.createElement('button');
 c3po_home.className = "theme-toggle";
 c3po_home.innerHTML = `<img src="back.png" class="back-icon" alt="Toggle Theme">`;
 
-
-
 // Light / Dark Mode Event Listener
 theme_toggle_button.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.toggle('dark-mode') ? 'dark':'light');
 });
 
 
@@ -31,7 +34,7 @@ if(home_c3po){
 }
 
 // C3PO -> Home Event Listener
-if(c3po_home){
+if(document.title === "C3PO"){
     body.prepend(c3po_home);
     c3po_home.addEventListener('click',function(){
         window.location.href = 'index.html';
