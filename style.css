@@ -8,6 +8,22 @@
   --card-bg: #f1f1f1;
 }
 
+/*main body of resume file*/
+body {
+    /* set main font for the page */
+    font-family: 'Trebuchet MS','Segoe UI', sans-serif;
+
+    /*formatting, give lines room to breath and tighen margins*/
+    line-height: 1.6;
+    margin: 0 auto;
+
+    /*set background color and text color of body elements*/
+    background-color: var(--bg);
+    color: var(--text-color);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /*main body of html file*/
 body.dark-mode{
        /* Baground color for page and base text color for page*/
@@ -127,38 +143,12 @@ header {
 
 /* PAGE: RESUME*/
 
-/*main body of resume file*/
-body.resume {
-    /* set main font for the page */
-    font-family: 'Trebuchet MS','Segoe UI', sans-serif;
-
-    /*formatting, give lines room to breath and tighen margins*/
-    line-height: 1.4;
-    margin: 0;
-
-    /*set background color and text color of body elements*/
-    background-color: var(--bg);
-    color: var(--text-color);
-}
-
 /*general headers*/
 .resume h2 {
     text-align: center;
 }
 
 /* PAGE: C3PO */
-
-/*main body of c3po file*/
-body.c3po {
-  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  margin: 0 auto;
-  padding: 40px 20px;
-  max-width: 1000px; /* Acts as the .container to keep content centered */
-  background-color: var(--bg);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 .c3po h1 {
   text-align: center;
@@ -227,10 +217,17 @@ td .group-pic {
 
 /*Back button for C3PO page*/
 #c3po-back {
-    border: none;
+    border: 1px solid var(--primary-color);
+
     color: var(--primary-color);
+    background-color: var(--card-bg);
+
     text-align: center;
     text-decoration: none;
+
     cursor: pointer;
     font-size: 18px;
+
+    margin-top: 20px;
+    
 }
