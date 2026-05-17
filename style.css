@@ -8,32 +8,6 @@
   --card-bg: #f1f1f1;
 }
 
-header {
-  text-align: center; 
-  font-size: 1rem;
-}
-
-/*contact info class*/
-.contact-info{
-    border-collapse: separate;
-    padding-bottom: 15px;
-    margin: 0 auto;
-    font-size: 1rem;
-}
-/*main body of html file*/
-body{
-    /* set main font for the page */
-    font-family: 'Trebuchet MS','Segoe UI', sans-serif;
-
-    /*formatting, give lines room to breath and tighen margins*/
-    line-height: 1.4;
-    margin: 0;
-
-    /*set background color and text color of body elements*/
-    background-color: var(--bg);
-    color: var(--text-color)
-}
-
 /*main body of html file*/
 body.dark-mode{
        /* Baground color for page and base text color for page*/
@@ -44,6 +18,13 @@ body.dark-mode{
   /* color for card backgrounds*/
   --card-bg: #5c5b5b;
 }
+
+header {
+  text-align: center; 
+  font-size: 1rem;
+}
+
+/*CLASSES*/
 
 /*main container for resume body*/
 .container{
@@ -77,6 +58,14 @@ body.dark-mode{
     transform: scale(1.1); /* Subtle pop on hover */
 }
 
+/*contact info class*/
+.contact-info{
+    border-collapse: separate;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
 /*project cards*/
 .project-card{
     /*set unique background color and color highlight*/
@@ -99,6 +88,13 @@ body.dark-mode{
     
 }
 
+/*hover, build in function, change elements to this code when hover over project card*/
+.project-card:hover{
+    /*change how elements in project card look when they are hovered over*/
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 /*section cards*/
 .section-card{
     /*set unique background color and color highlight*/
@@ -117,15 +113,6 @@ body.dark-mode{
     
 }
 
-/*hover, build in function, change elements to this code when hover over project card*/
-.project-card:hover{
-    /*change how elements in project card look when they are hovered over*/
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-
-
 /*table class*/
 .table-class{
     border-collapse: separate;
@@ -138,8 +125,112 @@ body.dark-mode{
     padding: 10px;
 }
 
+/* PAGE: RESUME*/
+
+/*main body of resume file*/
+body.resume {
+    /* set main font for the page */
+    font-family: 'Trebuchet MS','Segoe UI', sans-serif;
+
+    /*formatting, give lines room to breath and tighen margins*/
+    line-height: 1.4;
+    margin: 0;
+
+    /*set background color and text color of body elements*/
+    background-color: var(--bg);
+    color: var(--text-color);
+}
 
 /*general headers*/
-h2 {
-      text-align: center;
-    }
+.resume h2 {
+    text-align: center;
+}
+
+/* PAGE: C3PO */
+
+/*main body of c3po file*/
+body.c3po {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1000px; /* Acts as the .container to keep content centered */
+  background-color: var(--bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.c3po h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.c3po h1 + p {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.c3po h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.c3po-layout {
+  display: flex;
+  gap: 30px;      
+  align-items: flex-start;           
+  flex-wrap: wrap;           
+}
+
+.c3po-column {
+  flex: 1;                  
+  min-width: 300px;         
+}
+
+.c3po-card{
+  background-color: var(--card-bg);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+td .group-pic {
+  background-color: transparent;
+  border-left: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.c3po ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.c3po li {
+  margin-bottom: 8px;
+}
+
+/* C3PO Group Picture */
+.group-pic img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1); /* The even 'glow' effect */
+}
+
+/*Back button for C3PO page*/
+#c3po-back {
+    border: none;
+    color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}

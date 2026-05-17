@@ -1,134 +1,20 @@
 
-:root {
-  --bg: #ffffff;
-  --text-color: #4c5c68;
-  --primary-color: #1985a1;
-  --card-bg: #f1f1f1;
-}
-
-
-body.dark-mode {
-  --bg: #515151;
-  --text-color: #ffffff;
-  --primary-color: #1985a1;
-  --card-bg: #5c5b5b;
-}
-
-.theme-toggle {
-    appearance: none;      
-    -webkit-appearance: none; 
-    background-color: transparent;
-    border: 0;
-    width: auto;
-    height: auto;
-}
-
-.mode-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 15px;
-    width: 50px; 
-    height: auto; 
-    
-    z-index: 1000; /* Ensures it stays on top of other elements */
-    transition: transform 0.2s ease;
-}
-
-.mode-icon:hover {
-    transform: scale(1.1); /* Subtle pop on hover */
-}
-
-#c3po-back {
-    border: none;
-    color: var(--primary-color);
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-
-body {
-  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  margin: 0 auto;
-  padding: 40px 20px;
-  max-width: 1000px; /* Acts as the .container to keep content centered */
-  background-color: var(--bg);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-h1 {
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-h1 + p {
-  text-align: center;
-  font-style: italic;
-  margin-top: 0;
-  margin-bottom: 40px;
-  opacity: 0.8;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-}
-
-
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 20px; 
-}
-
-td {
-  vertical-align: top;
-  width: 50%;
-}
-
-
-td div {
-  background-color: var(--card-bg);
-  border-left: 4px solid var(--primary-color);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 
 
-td .group-pic {
-  background-color: transparent;
-  border-left: none;
-  padding: 0;
-  box-shadow: none;
-}
-
-td .group-pic:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-.group-pic img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 2px solid var(--primary-color);
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1); /* The even 'glow' effect */
-}
 
 
-ul {
-  padding-left: 20px;
-  margin-bottom: 0;
-}
 
-li {
-  margin-bottom: 8px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
