@@ -248,3 +248,32 @@ td .group-pic {
     margin-top: 20px;
     
 }
+
+/*MOVIE DB*/
+.movie_db .container{
+  display: flex;
+  max-width: 600px;
+  flex-direction: row;
+
+  justify-content: center;
+  width: max-content;
+
+  border: solid;
+  border-width: 6px;
+  border-color: var(--primary-color);
+  border-radius: 5px;
+
+  padding: 10px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+.movie_db .col{
+  padding: 5px;
+}
+
+.movie_db .col h3{
+  text-align: center;
+}
