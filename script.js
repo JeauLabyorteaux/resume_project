@@ -33,7 +33,7 @@ if(home_c3po){
 // Home -> Movie Event Listener
 if(home_movie){
     home_movie.addEventListener('click',function(){
-        window.location.href = 'movie_db.html';
+        window.location.href = 'movie_search.html';
 })
 
 }
