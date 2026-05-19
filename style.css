@@ -76,12 +76,13 @@ header {
     transform: scale(1.1); /* Subtle pop on hover */
 }
 
-/* c3po back button*/
+/* back button*/
 .back-icon {
     top: 20px;
     left: 15px;
     width: 50px; 
     height: auto; 
+    position: fixed;
     
     z-index: 1000; /* Ensures it stays on top of other elements */
     transition: transform 0.2s ease;

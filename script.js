@@ -1,6 +1,7 @@
 const body = document.body;
 const cards = document.querySelectorAll('.section-card, .project-card');
-const home_c3po = document.getElementById('c3po');
+const home_c3po = document.getElementById('c3po_project');
+const home_movie = document.getElementById('movie_project');
 
 
 // Light / Dark Mode Toggle Button
@@ -25,6 +26,14 @@ theme_toggle_button.addEventListener('click', function() {
 if(home_c3po){
     home_c3po.addEventListener('click',function(){
         window.location.href = 'c3po.html';
+})
+
+}
+
+// Home -> Movie Event Listener
+if(home_movie){
+    home_movie.addEventListener('click',function(){
+        window.location.href = 'movie_db.html';
 })
 
 }
