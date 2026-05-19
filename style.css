@@ -250,6 +250,11 @@ td .group-pic {
 }
 
 /*MOVIE DB*/
+body.movie_db{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column
+}
 .movie_db .container{
   display: flex;
   max-width: 600px;
@@ -276,4 +281,11 @@ td .group-pic {
 
 .movie_db .col h3{
   text-align: center;
+}
+
+.legal{
+  text-align: center;
+  
+  margin-top: auto;
+  bottom: 20px;
 }
