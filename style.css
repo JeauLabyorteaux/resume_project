@@ -101,7 +101,7 @@ header {
 
 
     padding: 9px 5px 4px 5px;
-    margin: auto auto 25px auto;
+    margin: auto auto 20px auto;
     
 }
 
@@ -111,6 +111,7 @@ header {
   width: 100%;
   height: auto;
 }
+
 
 /*project cards*/
 .project-card{
@@ -176,6 +177,11 @@ header {
 /*general headers*/
 .resume h2 {
     text-align: center;
+}
+
+.download{
+  text-align: center;
+  padding-bottom: 12px;
 }
 
 /* PAGE: C3PO */
