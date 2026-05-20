@@ -94,10 +94,22 @@ header {
 
 /*contact info class*/
 .contact-info{
-    border-collapse: separate;
-    padding-bottom: 15px;
-    margin: 0 auto;
-    font-size: 1rem;
+    width: max-content;
+    border: solid;
+    border-color: var(--primary-color);
+    border-radius: 10px;
+
+
+    padding: 9px 5px 4px 5px;
+    margin: auto auto 5px auto;
+    
+}
+
+.contact-info img{
+  
+  max-width: 4rem;
+  width: 100%;
+  height: auto;
 }
 
 /*project cards*/
