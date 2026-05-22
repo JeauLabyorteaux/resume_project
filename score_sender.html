@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>Score Automation Project</title>
+</head>
+<body class="project-page">
+    <!-- Main header updated to center properly using your .project-page styles -->
+    <header>
+        <h1>Score Automation System</h1>
+        <p>Python-Based Grade Calculator & Parent Communication Tool</p>
+    </header>
+
+    <div class="project-layout">
+        <!-- Left Column: Project Details -->
+        <div class="project-column">
+            <div class="project-info-card">
+                <h2>Project Overview</h2>
+                <p>
+                    To streamline administrative tracking, I developed a Python-based score averaging and distribution automation script. The tool is designed to eliminate manual data entry errors by automatically computing current student averages and securely sharing progress updates directly with parents.
+                </p>
+            </div>
+
+            <div class="project-info-card">
+                <h2>Technical Implementation</h2>
+                <p>
+                    The automation core is built using Python, utilizing Pandas library to parse test scores. It calculates averages and integrates with an automated mail delivery protocol to dispatch clean, individualized progress summaries.
+                </p>
+            </div>
+
+            <div class="project-info-card">
+                <h2>Key Achievements</h2>
+                <ul> 
+                    <li>Engineered an automated script that calculates dynamic student averages.</li> 
+                    <li>Built a secure, template-driven email messaging pipeline to instantly format and send progress reports directly to parent contacts.</li>
+                    <li>Reduced grading administration overhead and eliminated human error risks associated with copy-pasting report figures.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>

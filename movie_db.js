@@ -6,7 +6,7 @@ const streamingUL = document.querySelector('.streaming-list');
 const buyUL = document.querySelector('.buy-list');
 const rentUL = document.querySelector('.rent-list');
 
-// C3PO->Home Button
+// MovieDB->Home Button
 const home_button = document.createElement('button');
 home_button.className = "theme-toggle";
 home_button.innerHTML = `<img src="back.png" class="back-icon" alt="Toggle Theme">`;

@@ -178,14 +178,13 @@ header {
     text-align: center;
 }
 
-/* PAGE: C3PO */
-
-.c3po h1 {
+/* PAGE: PROJECT DETAILS */
+.project-page h1 {
   text-align: center;
   margin-bottom: 5px;
 }
 
-.c3po h1 + p {
+.project-page h1 + p {
   text-align: center;
   font-style: italic;
   margin-top: 0;
@@ -193,24 +192,27 @@ header {
   opacity: 0.8;
 }
 
-.c3po h2 {
+.project-page h2 {
   margin-top: 0;
   font-size: 1.4rem;
 }
 
-.c3po-layout {
+.project-layout {
   display: flex;
   gap: 30px;      
   align-items: flex-start;           
-  flex-wrap: wrap;           
+  flex-wrap: wrap;         
+  max-width: 90vw;     /* Limits how wide your multi-column section can get */
+  margin: 0 auto;        /* Centers the entire layout section on the screen */
+  width: 100%;  
 }
 
-.c3po-column {
+.project-column {
   flex: 1;                  
   min-width: 300px;         
 }
 
-.c3po-card{
+.project-info-card{
   background-color: var(--card-bg);
   border-left: 4px solid var(--primary-color);
   padding: 20px;
@@ -227,16 +229,16 @@ td .group-pic {
   box-shadow: none;
 }
 
-.c3po ul {
+.project-page ul {
   padding-left: 20px;
   margin-bottom: 0;
 }
 
-.c3po li {
+.project-page li {
   margin-bottom: 8px;
 }
 
-/* C3PO Group Picture */
+/* Project Details Image */
 .group-pic img {
   max-width: 100%;
   height: auto;
@@ -245,8 +247,8 @@ td .group-pic {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1); /* The even 'glow' effect */
 }
 
-/*Back button for C3PO page*/
-#c3po-back {
+/*Back button for Project pages*/
+#project-back {
     border: 1px solid var(--primary-color);
 
     color: var(--primary-color);

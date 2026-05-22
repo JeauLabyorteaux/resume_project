@@ -1,6 +1,7 @@
 const body = document.body;
 const cards = document.querySelectorAll('.section-card, .project-card');
 const home_c3po = document.getElementById('c3po_project');
+const home_ss = document.getElementById('score_send');
 const home_movie = document.getElementById('movie_project');
 
 
@@ -14,6 +15,11 @@ body.prepend(theme_toggle_button);
 const c3po_home = document.createElement('button');
 c3po_home.className = "theme-toggle";
 c3po_home.innerHTML = `<img src="back.png" class="back-icon" alt="Toggle Theme">`;
+
+// Score_Sender->Home Button
+const ss_home = document.createElement('button');
+ss_home.className = "theme-toggle";
+ss_home.innerHTML = `<img src="back.png" class="back-icon" alt="Toggle Theme">`;
 
 // Light / Dark Mode Event Listener
 theme_toggle_button.addEventListener('click', function() {
@@ -30,6 +36,14 @@ if(home_c3po){
 
 }
 
+// Home -> Score Sender Event Listener
+if(home_ss){
+    home_ss.addEventListener('click',function(){
+        window.location.href = 'score_sender.html';
+})
+
+}
+
 // Home -> Movie Event Listener
 if(home_movie){
     home_movie.addEventListener('click',function(){
@@ -42,6 +56,14 @@ if(home_movie){
 if(document.title === "C3PO"){
     body.prepend(c3po_home);
     c3po_home.addEventListener('click',function(){
+        window.location.href = 'index.html';
+})
+}
+
+// Score Sender -> Home Event Listener
+if(document.title === "Score Automation Project"){
+    body.prepend(ss_home);
+    ss_home.addEventListener('click',function(){
         window.location.href = 'index.html';
 })
 }
