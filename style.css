@@ -1,6 +1,6 @@
 :root {
   color-scheme: light dark;
-    /* Baground color for page and base text color for page*/
+  /* Background color for page and base text color for page*/
   --bg: #ffffff;
   --text-color: #4c5c68;
   /* main color */
@@ -11,23 +11,21 @@
 
 /*main body of resume file*/
 body {
-    /* set main font for the page */
-    font-family: 'Trebuchet MS','Segoe UI', sans-serif;
+  /* set main font for the page */
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
 
-    /*formatting, give lines room to breath and tighen margins*/
-    line-height: 1.6;
-    margin: 0 auto;
+  /*formatting, give lines room to breath and tighen margins*/
+  line-height: 1.6;
+  margin: 0 auto;
 
-    /*set background color and text color of body elements*/
-    background-color: var(--bg);
-    color: var(--text-color);
-
-    /*transition: background-color 0.3s ease, color 0.3s ease;*/
+  /*set background color and text color of body elements*/
+  background-color: var(--bg);
+  color: var(--text-color);
 }
 
 /*main body of html file*/
-html.dark-mode{
-       /* Baground color for page and base text color for page*/
+html.dark-mode {
+  /* Background color for page and base text color for page*/
   --bg: #515151;
   --text-color: #ffffff;
   /* main color */
@@ -44,147 +42,138 @@ header {
 /*CLASSES*/
 
 /*main container for resume body*/
-.container{
-    /*set max width of resume*/
-    max-width: 900px;
-    /*center resume on page (0 margin top and bottom, auto centered on sides)*/
-    margin: 0 auto
+.container {
+  /*set max width of resume*/
+  max-width: 900px;
+  /*center resume on page (0 margin top and bottom, auto centered on sides)*/
+  margin: 0 auto;
 }
 
 .theme-toggle {
-    appearance: none;      
-    -webkit-appearance: none; 
-    background-color: transparent;
-    border: 0;
-    width: auto;
-    height: auto;
+  appearance: none;      
+  -webkit-appearance: none; 
+  background-color: transparent;
+  border: 0;
+  width: auto;
+  height: auto;
 }
 
 /* light/dark mode button*/
 .mode-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 15px;
-    width: 50px; 
-    height: auto; 
-    
-    z-index: 1000; /* Ensures it stays on top of other elements */
-    transition: transform 0.2s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 50px; 
+  height: auto; 
+  
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  transition: transform 0.2s ease;
 }
 
 .mode-icon:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1); 
 }
 
 /* back button*/
 .back-icon {
-    top: 20px;
-    left: 15px;
-    width: 50px; 
-    height: auto; 
-    position: fixed;
-    
-    z-index: 1000; /* Ensures it stays on top of other elements */
-    transition: transform 0.2s ease;
+  top: 20px;
+  left: 15px;
+  width: 50px; 
+  height: auto; 
+  position: fixed;
+  
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  transition: transform 0.2s ease;
 }
 
 .back-icon:hover {
-    transform: scale(1.1); /* Subtle pop on hover */
+  transform: scale(1.1); /* Subtle pop on hover */
 }
 
 /*contact info class*/
-.contact-info{
-    width: max-content;
-    border: solid;
-    border-color: var(--primary-color);
-    border-radius: 10px;
+.contact-info {
+  width: max-content;
+  border: solid;
+  border-color: var(--primary-color);
+  border-radius: 10px;
 
-
-    padding: 9px 5px 4px 5px;
-    margin: auto auto 20px auto;
-    
+  padding: 9px 5px 4px 5px;
+  margin: auto auto 20px auto;
 }
 
-.contact-info img{
-  
+.contact-info img {
   max-width: 4rem;
   width: 100%;
   height: auto;
 }
 
-
 /*project cards*/
-.project-card{
-    /*set unique background color and color highlight*/
-    background-color: var(--card-bg);
-    border: 2px solid var(--primary-color);
+.project-card {
+  /*set unique background color and color highlight*/
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
 
-    /*padding protecting div content from div*/
-    padding: 10px;
+  /*padding protecting div content from div*/
+  padding: 10px;
 
-    /*padding to come after div box, separating project cards*/
-    margin-bottom: 20px;
+  /*padding to come after div box, separating project cards*/
+  margin-bottom: 20px;
 
-    /*give the edges of the div a nice curve*/
-    border-radius: 10px;
+  /*give the edges of the div a nice curve*/
+  border-radius: 10px;
 
-
-    transition: transform 0.3s, box-shadow 0.5s;
-    
-    cursor: pointer;
-    
+  transition: transform 0.3s, box-shadow 0.5s;
+  cursor: pointer;
 }
 
 /*hover, build in function, change elements to this code when hover over project card*/
-.project-card:hover{
-    /*change how elements in project card look when they are hovered over*/
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+.project-card:hover {
+  /*change how elements in project card look when they are hovered over*/
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /*section cards*/
-.section-card{
-    /*set unique background color and color highlight*/
-    background-color: var(--card-bg);
-    border-top: 4px solid var(--primary-color);
+.section-card {
+  /*set unique background color and color highlight*/
+  background-color: var(--card-bg);
+  border-top: 4px solid var(--primary-color);
 
-    /*padding protecting div content from div*/
-    padding: 10px;
+  /*padding protecting div content from div*/
+  padding: 10px;
 
-    /*padding to come after div box, separating project cards*/
-    margin-bottom: 20px;
+  /*padding to come after div box, separating project cards*/
+  margin-bottom: 20px;
 
-    /*x offset / y offset / blur / spread 0 0 15 5 for center shadow*/
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
-    
-    
+  /*x offset / y offset / blur / spread 0 0 15 5 for center shadow*/
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 }
 
 /*table class*/
-.table-class{
-    border-collapse: separate;
-    border-spacing: 5px;
-    margin: 0 auto;
+.table-class {
+  border-collapse: separate;
+  border-spacing: 5px;
+  margin: 0 auto;
 }
 
 /*table item*/
-.table-class td{
-    padding: 10px;
+.table-class td {
+  padding: 10px;
 }
 
 /* PAGE: RESUME*/
 
 /*general headers*/
 .resume h2 {
-    text-align: center;
+  text-align: center;
 }
 
-.download{
+.download {
   text-align: center;
   padding-bottom: 12px;
 }
 
-.download-resume-button{
+.download-resume-button {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
@@ -199,7 +188,7 @@ header {
   transition: transform 0.3s ease;
 }
 
-.download-resume-button:hover{
+.download-resume-button:hover {
   transform: scale(1.1);
 }
 
@@ -237,7 +226,7 @@ header {
   min-width: 300px;         
 }
 
-.project-info-card{
+.project-info-card {
   background-color: var(--card-bg);
   border-left: 4px solid var(--primary-color);
   padding: 20px;
@@ -247,7 +236,7 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-td .group-pic {
+.group-pic {
   background-color: transparent;
   border-left: none;
   padding: 0;
@@ -274,28 +263,28 @@ td .group-pic {
 
 /*Back button for Project pages*/
 #project-back {
-    border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
 
-    color: var(--primary-color);
-    background-color: var(--card-bg);
+  color: var(--primary-color);
+  background-color: var(--card-bg);
 
-    text-align: center;
-    text-decoration: none;
+  text-align: center;
+  text-decoration: none;
 
-    cursor: pointer;
-    font-size: 18px;
+  cursor: pointer;
+  font-size: 18px;
 
-    margin-top: 20px;
-    
+  margin-top: 20px;
 }
 
 /*MOVIE DB*/
-body.movie_db{
+body.movie_db {
   min-height: 100vh;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
-.movie_db .container{
+
+.movie_db .container {
   display: flex;
   max-width: 600px;
   flex-direction: row;
@@ -312,20 +301,18 @@ body.movie_db{
 
   margin-top: 10px;
   margin-bottom: 20px;
-
 }
 
-.movie_db .col{
+.movie_db .col {
   padding: 5px;
 }
 
-.movie_db .col h3{
+.movie_db .col h3 {
   text-align: center;
 }
 
-.legal{
+.legal {
   text-align: center;
-  
   margin-top: auto;
   bottom: 20px;
 }
