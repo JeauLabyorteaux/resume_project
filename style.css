@@ -73,7 +73,7 @@ header {
 }
 
 .mode-icon:hover {
-    transform: scale(1.1); /* Subtle pop on hover */
+    transform: scale(1.1); 
 }
 
 /* back button*/
@@ -101,7 +101,7 @@ header {
 
 
     padding: 9px 5px 4px 5px;
-    margin: auto auto 25px auto;
+    margin: auto auto 20px auto;
     
 }
 
@@ -111,6 +111,7 @@ header {
   width: 100%;
   height: auto;
 }
+
 
 /*project cards*/
 .project-card{
@@ -176,6 +177,30 @@ header {
 /*general headers*/
 .resume h2 {
     text-align: center;
+}
+
+.download{
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.download-resume-button{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  /*color styling*/
+  background-color: var(--primary-color);
+  color: white;
+
+  /*remove underline*/
+  text-decoration: none;
+
+  transition: transform 0.3s ease;
+}
+
+.download-resume-button:hover{
+  transform: scale(1.1);
 }
 
 /* PAGE: PROJECT DETAILS */
