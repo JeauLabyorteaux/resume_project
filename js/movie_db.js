@@ -9,7 +9,7 @@ const rentUL = document.querySelector('.rent-list');
 // MovieDB->Home Button
 const home_button = document.createElement('button');
 home_button.className = "theme-toggle";
-home_button.innerHTML = `<img src="back.png" class="back-icon" alt="Toggle Theme">`;
+home_button.innerHTML = `<img src="../assets/images/back.png" class="back-icon" alt="Toggle Theme">`;
 
 function displayProvidersToUser(title, apiResponse) {
     // Clear out any old search results from previous clicks
@@ -83,12 +83,12 @@ search_button.addEventListener('click', function() {
 
 body.prepend(home_button);
     home_button.addEventListener('click',function(){
-        window.location.href = 'index.html';})
+        window.location.href = '../html/index.html';})
 
 // Light / Dark Mode Toggle Button
 const theme_toggle_button = document.createElement('button');
 theme_toggle_button.className = "theme-toggle";
-theme_toggle_button.innerHTML = `<img src="theme.png" class="mode-icon" alt="Toggle Theme">`;
+theme_toggle_button.innerHTML = `<img src="../assets/images/theme.png" class="mode-icon" alt="Toggle Theme">`;
 body.prepend(theme_toggle_button);
 
 // Light / Dark Mode Event Listener
