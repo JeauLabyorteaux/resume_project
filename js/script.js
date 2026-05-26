@@ -31,7 +31,7 @@ theme_toggle_button.addEventListener('click', function() {
 // Home -> C3PO Event Listener
 if(home_c3po){
     home_c3po.addEventListener('click',function(){
-        window.location.href = 'html/c3po.html';
+        window.location.href = '/html/c3po.html';
 })
 
 }
@@ -39,7 +39,7 @@ if(home_c3po){
 // Home -> Score Sender Event Listener
 if(home_ss){
     home_ss.addEventListener('click',function(){
-        window.location.href = 'html/score_sender.html';
+        window.location.href = '/html/score_sender.html';
 })
  
 }
@@ -47,7 +47,7 @@ if(home_ss){
 // Home -> Movie Event Listener
 if(home_movie){
     home_movie.addEventListener('click',function(){
-        window.location.href = 'html/movie_search.html';
+        window.location.href = '/html/movie_search.html';
 })
 
 }
