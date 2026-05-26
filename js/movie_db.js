@@ -83,7 +83,7 @@ search_button.addEventListener('click', function() {
 
 body.prepend(home_button);
     home_button.addEventListener('click',function(){
-        window.location.href = '../html/index.html';})
+        window.location.href = '../index.html';})
 
 // Light / Dark Mode Toggle Button
 const theme_toggle_button = document.createElement('button');

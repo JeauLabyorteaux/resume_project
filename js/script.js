@@ -56,7 +56,7 @@ if(home_movie){
 if(document.title === "C3PO"){
     body.prepend(c3po_home);
     c3po_home.addEventListener('click',function(){
-        window.location.href = '../html/index.html';
+        window.location.href = '../index.html';
 })
 }
 
@@ -64,7 +64,7 @@ if(document.title === "C3PO"){
 if(document.title === "Score Automation Project"){
     body.prepend(ss_home);
     ss_home.addEventListener('click',function(){
-        window.location.href = '../html/index.html';
+        window.location.href = '../index.html';
 })
 }
 
