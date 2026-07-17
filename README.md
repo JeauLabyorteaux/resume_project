@@ -1,9 +1,6 @@
-Welcome to my website!
+Welcome! This is the repository for my personal portfolio website, deployed and hosted on AWS Lightsail.
 
-This is my personal website hosted through AWS Lightsail.
+I didn't want to re-invent the wheel. I just want to build a home base to showcase my resume, track my software engineering projects, and share my work with the world.
 
-Most of the design is "Vibe Coded", try as I might there's no way I'm beating AI in terms of CSS design.
+Most of the CSS and visual layout was "Vibe Coded" with AI assistance. Let's be real, try as I might there's no way I'm beating AI in terms of CSS design.
 
-I wanted an online way to display my resume and to host a few projects.
-
-I'm not trying to re-invent the wheel with this website, just carve out my own corner of the internet.
