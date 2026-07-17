@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <title>Jeau Labyorteaux</title>
+  <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.documentElement.classList.add('dark-mode');
+        }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="resume">
+
+<button class="theme-toggle" id="resume-back">
+  <img src="assets/images/back.png" class="back-icon" alt="Go Back to Home">
+</button>
+
+<div class="container">
+  <header>
+    <h1>Jeau Labyorteaux</h1>
+
+    <div class="contact-info">
+      <a href="https://www.linkedin.com/in/jeau-labyorteaux-8024b3222" target="_blank"><img src="assets/images/linkedin.png"></a>
+      <a href="mailto:jeau711@gmail.com" target="_blank"> <img src="assets/images/mail.png"></a>
+      <a href="https://github.com/JeauLabyorteaux" target="_blank"><img src="assets/images/github.png"></a>
+    </div>
+  </header>
+
+  <section id="summary" class="section-card">
+  <h2>Summary</h2>
+  <p>
+    Detail-oriented computer science graduate with a strong foundation in software development, 
+    automation, and data management. Experienced in tutoring and mentoring students in programming 
+    and algorithm design, while leading collaborative technical projects. Skilled in Python, C/C++, 
+    Rust, and data workflows, with a proven ability to streamline processes and deliver reliable solutions.
+  </p>
+  </section>
+
+  <section id = "education", class = "section-card">
+  <h2>Education & Skills</h2>
+  <table class="table-class">
+    <tr>
+      <td>
+        <p>
+          <b>B.S. in Computer Science & Engineering</b><br>
+          <i>University of Nevada, Reno</i><br>
+          Minor: Mathematics<br>
+          Graduation Date: June 2023<br>
+          GPA: 3.88/4.0 (Deans List x4 Years)
+        </p>
+      </td>
+      <td>
+        <p>
+          <b>Languages:</b> Python, C, C++, HTML/CSS, JavaScript, Rust,  Bash/Shell Scripting<br><br>
+          <b>Cloud:</b> Amazon Web Services (AWS), Cloud Infrastructure, Serverless Computing<br><br>
+          <b>Development Tools:</b> Git/GitHub, GitHub Actions, Docker, Unit Testing<br><br>
+        </p>
+      </td>
+    </tr>
+  </table>
+  </section>
+
+  <section id = "experience", class = "section-card">
+  <h2>Work Experience</h2>
+
+  <h3>Excel Academy - Las Vegas, NV</h3>
+  <h4><i>Academic Coordinator</i></h4>
+  <h4>May 2025 - Present</h4>
+    <p>
+      - Developed outreach program curricula for SAT/ACT high school bootcamps, coordinating instruction for up to 700 students at a time.<br>
+      - Prepared individualized lesson plans and reviewed tutor notes daily to ensure accuracy, adherence to protocols, and quality instruction.
+    </p>
+
+  <h4><i>Computer Science Tutor</i></h4>
+  <h4>November 2024 - Present</h4>
+  <p>
+    - Taught computer science concepts to diverse learners, from introductory programming to advanced placement courses, 
+      ensuring clear understanding of technical concepts and algorithms.<br>
+    - Guided students through design, implementation, and debugging of course projects.
+  </p>
+  </section>
+
+  <section id="projects", class = "section-card">
+  <h2>Projects</h2>
+  <div id="c3po_project" class="project-card">
+  <h3>C3PO (Copy 3D, Paste Object)</h3>
+  <p>
+    - Led a team of three to develop a functional 3D scanner and rendering software.<br>
+    - Built the UI menu framework to integrate the 3D viewer for object visualization.
+  </p>
+  </div>
+  <!--
+  <div id = "movie_project" class="project-card">
+  <h3>Movie Availability Searcher</h3>
+  <p>
+    - Simple search for movie availability using TMDB [The Movie DataBase] API.<br>
+    - Made for my mom, so she always knows where to find her favorite movies ❤️
+  </p>
+  </div>
+  -->
+
+  <div id = "score_send" class="project-card">
+  <h3>Excel Academy Score Automation</h3>
+  <p>
+    - Automated practice test scoring and email distribution using Pandas, saving 2-3 hours of manual work weekly.<br>
+    - Built a robust data pipeline to transform repetitive tasks into an error-resistant workflow.
+  </p>
+  </div>
+  </section>
+</div>
+<div class="download">
+      <a href="assets/docs/Jeau_Labyorteaux_Resume.pdf" target="_blank" class="download-resume-button">Download Resume</a>
+</div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

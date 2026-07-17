@@ -1,37 +1,38 @@
 :root {
   color-scheme: light dark;
-  /* Background color for page and base text color for page*/
-  --bg: #ffffff;
-  --text-color: #4c5c68;
-  /* main color */
-  --primary-color: #1985a1;
-  /* color for card backgrounds*/
-  --card-bg: #f1f1f1;
+  /* Background color and base text - Clean light gray and gunmetal */
+  --bg: #f8f9fa;
+  --text-color: #2b2d42;
+  /* main color - Hajime's Transmutation / Blood Red */
+  --primary-color: #c1121f;
+  /* color for card backgrounds */
+  --card-bg: #ffffff;
 }
 
-/*main body of resume file*/
+/* main body of resume/landing files */
 body {
   /* set main font for the page */
   font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
 
-  /*formatting, give lines room to breath and tighen margins*/
+  /* formatting, give lines room to breathe and tighten margins */
   line-height: 1.6;
   margin: 0 auto;
 
-  /*set background color and text color of body elements*/
+  /* set background color and text color of body elements */
   background-color: var(--bg);
   color: var(--text-color);
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/*main body of html file*/
+/* main body of html file */
 html.dark-mode {
-  /* Background color for page and base text color for page*/
-  --bg: #515151;
-  --text-color: #ffffff;
-  /* main color */
-  --primary-color: #1985a1;
-  /* color for card backgrounds*/
-  --card-bg: #5c5b5b;
+  --bg: #0a0a0a; /* Abyss Black */
+  --text-color: #f1f1f1; /* Stark White */
+  --primary-color: #ff2a2a; /* Glowing Crimson Red */
+  --card-bg: #1a1a1a; /* Dark Gunmetal Gray */
 }
 
 header {
@@ -39,14 +40,118 @@ header {
   font-size: 1rem;
 }
 
-/*CLASSES*/
+/* ==========================================================================
+   LANDING PAGE SPECIFIC STYLES
+   ========================================================================== */
 
-/*main container for resume body*/
-.container {
-  /*set max width of resume*/
-  max-width: 900px;
-  /*center resume on page (0 margin top and bottom, auto centered on sides)*/
+.landing-page {
+  justify-content: center; /* Centers content vertically on the viewport */
+  align-items: center;
+  padding: 20px;
+}
+
+.landing-container {
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Hero elements */
+.hero {
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.hero-title .highlight {
+  color: var(--primary-color);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+/* CTA Buttons */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  /* Updated shadow to match red theme */
+  box-shadow: 0 8px 15px rgba(255, 42, 42, 0.3);
+  background-color: #8b0000; /* Darker blood red on hover */
+  border-color: #8b0000;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  /* Updated shadow to match red theme */
+  box-shadow: 0 8px 15px rgba(255, 42, 42, 0.15);
+  background-color: var(--card-bg);
+}
+
+.landing-footer {
+  margin-top: 20px;
+}
+
+/* ==========================================================================
+   PORTFOLIO & RESUME PAGES STYLES (PRESERVED)
+   ========================================================================== */
+
+/* main container for resume body */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .theme-toggle {
@@ -58,15 +163,15 @@ header {
   height: auto;
 }
 
-/* light/dark mode button*/
+/* light/dark mode button */
 .mode-icon {
   position: fixed;
   bottom: 20px;
   right: 15px;
-  width: 50px; 
-  height: auto; 
-  
-  z-index: 1000; /* Ensures it stays on top of other elements */
+  width: 3rem;         /* Uniform size */
+  height: 3rem;        /* Uniform size */
+  object-fit: contain;
+  z-index: 1000;
   transition: transform 0.2s ease;
 }
 
@@ -74,96 +179,93 @@ header {
   transform: scale(1.1); 
 }
 
-/* back button*/
-.back-icon {
+/* Fixed positioning for back button */
+#back-to-home, #resume-back {
+  position: fixed;
   top: 20px;
   left: 15px;
-  width: 50px; 
-  height: auto; 
-  position: fixed;
-  
-  z-index: 1000; /* Ensures it stays on top of other elements */
+  z-index: 1000; 
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 3rem;         /* Match container size with mode icon */
+  height: 3rem;
+}
+
+.back-icon {
+  width: 100%;         /* Fill the container perfectly */
+  height: 100%;
+  object-fit: contain;
   transition: transform 0.2s ease;
 }
 
 .back-icon:hover {
-  transform: scale(1.1); /* Subtle pop on hover */
+  transform: scale(1.1);
 }
 
-/*contact info class*/
+/* contact info class */
 .contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Neatly spaces out the icons */
   width: max-content;
-  border: solid;
-  border-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
-
-  padding: 9px 5px 4px 5px;
-  margin: auto auto 20px auto;
+  padding: 10px 15px;
+  margin: 0 auto 20px auto;
+  line-height: 0;
 }
 
+/* Force all contact PNG icons to a clean, unified size */
 .contact-info img {
-  max-width: 4rem;
-  width: 100%;
-  height: auto;
+  width: 2rem;        /* Strict, uniform width */
+  height: 2rem;       /* Strict, uniform height */
+  object-fit: contain; /* Prevents squishing or stretching */
+  transition: transform 0.2s ease;
 }
 
-/*project cards*/
+.contact-info a:hover img {
+  transform: scale(1.15); /* Adds a subtle, satisfying pop when hovered */
+}
+/* project cards */
 .project-card {
-  /*set unique background color and color highlight*/
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
-
-  /*padding protecting div content from div*/
   padding: 10px;
-
-  /*padding to come after div box, separating project cards*/
   margin-bottom: 20px;
-
-  /*give the edges of the div a nice curve*/
   border-radius: 10px;
-
   transition: transform 0.3s, box-shadow 0.5s;
   cursor: pointer;
 }
 
-/*hover, build in function, change elements to this code when hover over project card*/
 .project-card:hover {
-  /*change how elements in project card look when they are hovered over*/
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* Slightly darkened shadow */
 }
 
-/*section cards*/
+/* section cards */
 .section-card {
-  /*set unique background color and color highlight*/
   background-color: var(--card-bg);
   border-top: 4px solid var(--primary-color);
-
-  /*padding protecting div content from div*/
   padding: 10px;
-
-  /*padding to come after div box, separating project cards*/
   margin-bottom: 20px;
-
-  /*x offset / y offset / blur / spread 0 0 15 5 for center shadow*/
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 }
 
-/*table class*/
+/* table class */
 .table-class {
   border-collapse: separate;
   border-spacing: 5px;
   margin: 0 auto;
 }
 
-/*table item*/
 .table-class td {
   padding: 10px;
 }
 
-/* PAGE: RESUME*/
-
-/*general headers*/
+/* PAGE: RESUME */
 .resume h2 {
   text-align: center;
 }
@@ -177,14 +279,9 @@ header {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
-
-  /*color styling*/
   background-color: var(--primary-color);
   color: white;
-
-  /*remove underline*/
   text-decoration: none;
-
   transition: transform 0.3s ease;
 }
 
@@ -216,8 +313,8 @@ header {
   gap: 30px;      
   align-items: flex-start;           
   flex-wrap: wrap;         
-  max-width: 90vw;     /* Limits how wide your multi-column section can get */
-  margin: 0 auto;        /* Centers the entire layout section on the screen */
+  max-width: 90vw;     
+  margin: 0 auto;        
   width: 100%;  
 }
 
@@ -252,32 +349,26 @@ header {
   margin-bottom: 8px;
 }
 
-/* Project Details Image */
 .group-pic img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   border: 2px solid var(--primary-color);
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1); /* The even 'glow' effect */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/*Back button for Project pages*/
 #project-back {
   border: 1px solid var(--primary-color);
-
   color: var(--primary-color);
   background-color: var(--card-bg);
-
   text-align: center;
   text-decoration: none;
-
   cursor: pointer;
   font-size: 18px;
-
   margin-top: 20px;
 }
 
-/*MOVIE DB*/
+/* MOVIE DB */
 body.movie_db {
   min-height: 100vh;
   display: flex;
@@ -288,17 +379,13 @@ body.movie_db {
   display: flex;
   max-width: 600px;
   flex-direction: row;
-
   justify-content: center;
   width: max-content;
-
   border: solid;
   border-width: 6px;
   border-color: var(--primary-color);
   border-radius: 5px;
-
   padding: 10px;
-
   margin-top: 10px;
   margin-bottom: 20px;
 }
