@@ -23,6 +23,7 @@
     <header>
         <h1>Movie Availability Search</h1>
     </header>
+    
 
     <div class="container">
         <div class="col">
@@ -56,6 +57,14 @@
             </ul>
         </div>
     </div>
+
+    <details class="moviedb_details">
+        <summary>How this page works</summary>
+            <p>When you hit search, your request is sent to an AWS (Amazon Web Services) Lambda function. Acting as a secure middleman, this function allows us to query the movie database APIs while keeping our private access keys hidden and protected from the public.<br><br>
+                The Lambda function receives your request, communicates with the TMDB and JustWatch APIs, and retrieves the latest streaming and rental information.<br><br>
+                While your first search of the day might take a brief moment to wake up the system, subsequent searches are typically much faster, as the system stays warmed up and ready to process your request instantly.<br>
+            </p>
+    </details>
 
     <div class="legal">
     <!-- TMDB Legal Disclaimer (Mandatory Wording) -->
