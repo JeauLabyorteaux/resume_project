@@ -85,7 +85,7 @@ if (search_button){
 
 if (home_button) {
     home_button.addEventListener('click', function() {
-        window.location.href = 'index.html';
+        window.history.back();
     });
 }
 
