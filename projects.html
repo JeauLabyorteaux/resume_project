@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>My Projects</title>
-    <!-- Link your existing CSS file here -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,31 +27,28 @@
 
     <div class="container">
         
-        <!-- Project Grid -->
+        <!-- Projects -->
         <div class="project-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
             
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <a href="c3po.html">
-                    <h3>C3PO (Copy 3D, Paste Object)</h3>
-                    <p><i>College Senior Project</i><br>
-                        Custom LiDAR-based software to deliver high-precision 3D scanning and rendering.
-                    </p>
-                </a>
+            
+            <div class="project-card" id="c3po_project">
+                <h3>C3PO (Copy 3D, Paste Object)</h3>
+                <p><i>College Senior Project</i><br>
+                    Custom LiDAR-based software to deliver high-precision 3D scanning and rendering.
+                </p>
+               
             </div>
 
-            <!-- Project Card 2 -->
-            <div class="project-card">
+            <div class="project-card" id="score_send">
                 <h3>Score Automation</h3>
                 <p><i>Personal Project</i><br>
                 An automated system that calculates grade averages and instantly delivers performance reports to parents.</p>
             </div>
 
-            <!-- Project Card 3 -->
-            <div class="project-card">
+            <div class="project-card" id="movie_project">
                 <h3>Movie Availability Searcher</h3>
                 <p><i>Personal Project</i><br>Movie availability search tool using TMDB API.<br>
-    Made for my mom, so she always knows where to find her favorite movies ❤️
+                    Made for my mom, so she always knows where to find her favorite movies ❤️
                 </p>
             </div>
 
