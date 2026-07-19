@@ -231,6 +231,7 @@ header {
 }
 /* project cards */
 .project-card {
+  position: relative;
   background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
   padding: 10px;
@@ -238,6 +239,14 @@ header {
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.5s;
   cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    font-size: 1.3rem;
+    cursor: help; 
 }
 
 .project-card:hover {
