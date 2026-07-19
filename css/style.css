@@ -1,11 +1,8 @@
 :root {
   color-scheme: light dark;
-  /* Background color and base text - Clean light gray and gunmetal */
   --bg: #f8f9fa;
   --text-color: #2b2d42;
-  /* main color - Hajime's Transmutation / Blood Red */
   --primary-color: #c1121f;
-  /* color for card backgrounds */
   --card-bg: #ffffff;
 }
 
