@@ -7,9 +7,7 @@ const buyUL = document.querySelector('.buy-list');
 const rentUL = document.querySelector('.rent-list');
 
 // MovieDB->Home Button
-const home_button = document.createElement('button');
-home_button.className = "theme-toggle";
-home_button.innerHTML = `<img src="/assets/images/back.png" class="back-icon" alt="Toggle Theme">`;
+const home_button = document.getElementById('movie-search-back');
 
 function displayProvidersToUser(title, apiResponse) {
     // Clear out any old search results from previous clicks
@@ -76,19 +74,25 @@ async function getMovieProviders(movieTitle) {
 }
 
 // Call API if button pressed
-search_button.addEventListener('click', function() {
-    getMovieProviders(input.value);
+if (search_button){
+    search_button.addEventListener('click', function() {
+        getMovieProviders(input.value);
 });
 
+}
 
-body.prepend(home_button);
-    home_button.addEventListener('click',function(){
-        window.location.href = 'index.html';})
+
+
+if (home_button) {
+    home_button.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
 
 // Light / Dark Mode Toggle Button
 const theme_toggle_button = document.createElement('button');
 theme_toggle_button.className = "theme-toggle";
-theme_toggle_button.innerHTML = `<img src="/assets/images/theme.png" class="mode-icon" alt="Toggle Theme">`;
+theme_toggle_button.innerHTML = `<img src="assets/images/theme.png" class="mode-icon" alt="Toggle Theme">`;
 body.prepend(theme_toggle_button);
 
 // Light / Dark Mode Event Listener

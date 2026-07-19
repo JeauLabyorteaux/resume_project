@@ -180,7 +180,7 @@ header {
 }
 
 /* Fixed positioning for back button */
-#back-to-home, #resume-back {
+#back-to-home, #resume-back, #movie-search-back {
   position: fixed;
   top: 20px;
   left: 15px;
