@@ -24,7 +24,7 @@ theme_toggle_button.addEventListener('click', function() {
 
 if (backButton) {
     backButton.addEventListener('click', function() {
-        window.location.href = 'index.html';
+        window.history.back();
     });
 }
 
